@@ -25,7 +25,8 @@ def get_LastTick_Of(symbol):
 def copy_rates_from(symbol):
     timezone = pytz.timezone("Etc/UTC")
     utc_from = datetime.now(tz=timezone)
-    rates = mt5.copy_rates_from(symbol, mt5.TIMEFRAME_M1, utc_from, 1000)
+    rates = mt5.copy_rates_from(symbol, mt5.TIMEFRAME_M1, utc_from, 10)
+    return str(rates)
 
 
 
